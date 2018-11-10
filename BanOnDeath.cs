@@ -66,7 +66,7 @@ namespace BanOnDeath
 
         private void DeathBan(UnturnedPlayer player)
         {
-            if (!player.HasPermission("deathban.ignore"))
+            if (!player.HasPermission("banondeath.ignore"))
             {
                 SteamBlacklist.ban(player.CSteamID, CSteamID.Nil, Configuration.Instance.BanReason, Configuration.Instance.BanLengthSeconds);
                 player.Ban(Configuration.Instance.BanReason, Configuration.Instance.BanLengthSeconds);
