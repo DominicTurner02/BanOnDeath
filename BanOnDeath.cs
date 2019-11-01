@@ -68,7 +68,6 @@ namespace BanOnDeath
         {
             if (!player.HasPermission("banondeath.ignore"))
             {
-                SteamBlacklist.ban(player.CSteamID, CSteamID.Nil, Configuration.Instance.BanReason, Configuration.Instance.BanLengthSeconds);
                 player.Ban(Configuration.Instance.BanReason, Configuration.Instance.BanLengthSeconds);
                 Logger.LogWarning($"{player.DisplayName} [{player.Id}] has been banned for {Configuration.Instance.BanLengthSeconds} seconds for dying!");
             } else
